@@ -33,13 +33,21 @@ input[type='radio'] {}
 input[type="submit"], 
 input[type="reset"], 
 input[type="button"], 
-button {}
+button {
+	display: inline-block;
+	padding: .5em 1em;
+	font-size: 100%;
+	text-align: center;
+	text-decoration: none;
+	background-color: transparent;
+	border-radius: 4px;
+	border: 0px solid #bbb;
+	cursor: pointer;
+}
 input[type="submit"]:hover, 
 input[type="reset"]:hover, 
 input[type="button"]:hover, 
 button {
-	font-family: "Helvetica", "Arial";
-	font-size: 100%;
 }
 
 /* Tables */
@@ -60,12 +68,12 @@ hr {}
 /* Colors */
 .primary { background-color: #2098D1; color: #ffffff }
 .secondary { background-color: #44CCEB; color: #ffffff }
-.neutral { background-color: #e4e4e4; color: #ffffff }
+.neutral { background-color: #E4E4E4 }
 .warning { background-color: #E8910D; color: #ffffff }
-.error { background-color: #bf1f1f; color: #ffffff }
-.success { background-color: #7db72f; color: #ffffff }
+.error { background-color: #ED5650; color: #ffffff }
+.success { background-color: #2DBF64; color: #ffffff }
 .slate { background-color: black; color: #ffffff }
-.invert { background-color: black; color: #ffffff }
+.invert { background-color: #000; color: #ffffff }
 
 /* Element positioning */
 .absolute { position: absolute }
@@ -97,7 +105,7 @@ hr {}
 .one { width: 8.333% }
 
 /* Styling */
-.border { border: 1px #000 solid }
+.border { outline: 1px #000 solid }
 .round { border-radius: 4px }
 .no-pad { padding: 0 }
 

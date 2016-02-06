@@ -3,67 +3,98 @@
 	<head>
 		<link rel="stylesheet" href="nucleus.css">
 		<style>
-			div { margin-bottom: 1px; margin-right: 1px }
+			div { margin-bottom: 1px }
+			.section > div { margin-bottom: .25em }
+			.section > div > span { display: inline-block; margin: .5em }
 		</style>
 	</head>
 	<body>
 
-		<h1>Grids</h1>
-		<div class="twelve border neutral">.twelve, .full</div>
-		<div class="eleven border neutral">.eleven</div>
-		<div class="ten border neutral">.ten</div>
-		<div class="nine border neutral">.nine, .three-quarters</div>
-		<div class="eight border neutral">.eight, .two-thirds</div>
-		<div class="seven border neutral">.seven</div>
-		<div class="six border neutral">.six, .half</div>
-		<div class="five border neutral">.five</div>
-		<div class="four border neutral">.four, .third, .one-third</div>
-		<div class="three border neutral">.three, .quarter, .one-quarter</div>
-		<div class="two border neutral">.two</div>
-		<div class="one border neutral">.one</div>
+		<div class="ten center">
 
-		<h1>Colors</h1>
-		<div class="left three border primary">.primary</div>
-		<div class="left three border secondary">.secondary</div>
-		<div class="left three border neutral">.neutral</div>
-		<div class="clear"></div>
-		<div class="left three border warning">.warning</div>
-		<div class="left three border error">.error</div>
-		<div class="left three border success">.success</div>
-		<div class="clear"></div>
-		<div class="left three border note">.note</div>
-		<div class="left three border slate">.slate</div>
-		<div class="left three border invert">.invert</div>
-		<div class="clear"></div>
+			<h1>Nucleus CSS</h1>
+			<br>
 
-		<h1>Floating elements</h1>
-		<div class="quarter border left">.left</div>
-		<div class="clear"></div>
-		<div class="quarter border center">.center</div>
-		<div class="clear"></div>
-		<div class="quarter border right">.right</div>
-		<div class="clear"></div>
+			<h1>Grids (columns)</h1>
+			<div class="section">
+				<div class="full border neutral"><span>.twelve .full</span></div>
 
-		<h1>Text-align</h1>
-		<div class="two border t-left">.t-left</div>
-		<div class="clear"></div>
-		<div class="two border t-center">.t-center</div>
-		<div class="clear"></div>
-		<div class="two border t-right">.t-right</div>
-		<div class="clear"></div>
+				<div class="one border neutral left"><span>.one</span></div>
+				<div class="eleven border neutral left"><span>.eleven</span></div>
 
-		<h1>Buttons</h1>
-		<button class="xsmall">Extra small button</button>
-		<button class="small">Small button</button>
-		<button>Default button</button>
-		<button class="large">Large button</button>
-		<button class="xlarge">Extra large button</button>
-		<div class="clear"></div>
+				<div class="two border neutral left"><span>.two</span></div>
+				<div class="ten border neutral left"><span>.ten</span></div>
 
-		<h1>Icons</h1>
-		<i class="close"></i>
-		<i class="facebook"></i>
-		<br>
+				<div class="three border neutral left"><span>.three .quarter .one-quarter</span></div>
+				<div class="nine border neutral left"><span>.nine .three-quarters</span></div>
+
+				<div class="three border neutral left"><span>.three .quarter .one-quarter</span></div>
+				<div class="three border neutral left"><span>.three .quarter .one-quarter</span></div>
+				<div class="three border neutral left"><span>.three .quarter .one-quarter</span></div>
+				<div class="three border neutral left"><span>.three .quarter .one-quarter</span></div>
+
+				<div class="four border neutral left"><span>.four .third .one-third</span></div>
+				<div class="eight border neutral left"><span>.eight .two-thirds</span></div>
+
+				<div class="four border neutral left"><span>.four .third .one-third</span></div>
+				<div class="four border neutral left"><span>.four .third .one-third</span></div>
+				<div class="four border neutral left"><span>.four .third .one-third</span></div>
+
+				<div class="five border neutral left"><span>.five</span></div>
+				<div class="seven border neutral left"><span>.seven</span></div>
+
+				<div class="six border neutral left"><span>.six .half</span></div>
+				<div class="six border neutral left"><span>.six .half</span></div>
+				<div class="clear"></div>
+			</div>
+
+			<h1>Colors</h1>
+			<div class="section">
+				<div class="left quarter border primary"><span>.primary</span></div>
+				<div class="left quarter border secondary"><span>.secondary</span></div>
+				<div class="left quarter border neutral"><span>.neutral</span></div>
+				<div class="left quarter border warning"><span>.warning</span></div>
+				<div class="clear"></div>
+				<div class="left quarter border error"><span>.error</span></div>
+				<div class="left quarter border success"><span>.success</span></div>
+				<div class="left quarter border slate"><span>.slate</span></div>
+				<div class="left quarter border invert"><span>.invert</span></div>
+				<div class="clear"></div>
+			</div>
+
+			<h1>Floating elements</h1>
+			<div class="section">
+				<div class="quarter border left"><span>.left</span></div>
+				<div class="clear"></div>
+				<div class="quarter border center"><span>.center</span></div>
+				<div class="clear"></div>
+				<div class="quarter border right"><span>.right</span></div>
+				<div class="clear"></div>
+			</div>
+
+			<h1>Text-align</h1>
+			<div class="section">
+				<div class="two border t-left"><span>.t-left</span></div>
+				<div class="clear"></div>
+				<div class="two border t-center"><span>.t-center</span></div>
+				<div class="clear"></div>
+				<div class="two border t-right"><span>.t-right</span></div>
+				<div class="clear"></div>
+			</div>
+
+			<h1>Buttons</h1>
+			<button class="xsmall secondary">Extra small button</button>
+			<button class="small secondary">Small button</button>
+			<button class="primary">Default button</button>
+			<button class="large secondary">Large button</button>
+			<button class="xlarge secondary">Extra large button</button>
+			<div class="clear"></div>
+
+			<h1>Icons</h1>
+			<i class="close"></i>
+			<i class="facebook"></i>
+
+		</div>
 
 	</body>
 </html>
