@@ -1,0 +1,162 @@
+/*
+* Nucleus V0.0.0.0.0.1
+* Copyright 2016, Namn Namnsson
+* en URL
+* Free to use under the Creative Commons CC BY-ND license.
+* Datum
+*/
+
+/* Global elements */
+html {}
+body { 
+	background-color: #FFFFFD; /* Almost white */
+	color: #222222; /* Almost black */
+	font-family: "Helvetica", "Arial";
+	font-size: 100%;
+	margin: 0; 
+}
+
+/* Typography */
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+p {}
+span {}
+
+/* Forms */
+form {}
+input[type='text'] {}
+input[type='radio'] {}
+input[type="submit"], 
+input[type="reset"], 
+input[type="button"], 
+button {}
+input[type="submit"]:hover, 
+input[type="reset"]:hover, 
+input[type="button"]:hover, 
+button {
+	font-family: "Helvetica", "Arial";
+	font-size: 100%;
+}
+
+/* Tables */
+table {}
+tr {}
+th {}
+td {}
+
+/* Lists */
+ul {}
+ol {}
+li {}
+
+a {}
+a:hover {}
+hr {}
+
+/* Colors */
+.primary { background-color: #2098D1; color: #ffffff }
+.secondary { background-color: #44CCEB; color: #ffffff }
+.neutral { background-color: #e4e4e4; color: #ffffff }
+.warning { background-color: #E8910D; color: #ffffff }
+.error { background-color: #bf1f1f; color: #ffffff }
+.success { background-color: #7db72f; color: #ffffff }
+.slate { background-color: black; color: #ffffff }
+.invert { background-color: black; color: #ffffff }
+
+/* Element positioning */
+.absolute { position: absolute }
+.fixed { position: fixed }
+.relative { position: relative }
+.left { float: left }
+.right { float: right }
+.center { display: block; margin: auto }
+.clear { clear: both }
+.hide { display: none }
+
+/* Text positioning */
+.t-left { text-align: left }
+.t-right { text-align: right }
+.t-center { text-align: center }
+
+/* Sizing (Desktop) */
+.twelve, .full, { width: 100% }
+.eleven { width: 91.666% }
+.ten { width: 83.333% }
+.nine, .three-quarters { width: 75% }
+.eight, .two-thirds { width: 66.666% }
+.seven { width: 58.333% }
+.six, .half { width: 50% }
+.five { width: 41.666% }
+.four, .third, .one-third { width: 33.333% }
+.three, .quarter, .one-quarter { width: 25% }
+.two { width: 16.666% }
+.one { width: 8.333% }
+
+/* Styling */
+.border { border: 1px #000 solid }
+.round { border-radius: 4px }
+.no-pad { padding: 0 }
+
+.xs, .xsmall { font-size: 80% }
+.small { font-size: 90% }
+.large { font-size: 110% }
+.xl, .xlarge { font-size: 120% }
+
+
+/* Common icons */
+i.bar, i.menu, i.hamburger {}
+i.calendar {}
+i.cart {}
+i.check {}
+i.check-empty {}
+i.clock {}
+i.close:before { content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 53.858 53.858"><path d="M26.845 52.556c-14.195 0-25.71-11.517-25.71-25.71S12.65 1.133 26.844 1.133c14.194 0 25.71 11.517 25.71 25.71S41.04 52.557 26.846 52.557zM5.42 26.846c0 11.817 9.606 21.425 21.425 21.425 11.817 0 21.426-9.607 21.426-21.425S38.664 5.42 26.846 5.42C15.027 5.42 5.42 15.026 5.42 26.844z"/><path d="M40.11 36.92l-3.19 3.188c-.42.422-1.006.656-1.592.656s-1.172-.234-1.593-.656l-6.89-6.89-6.89 6.89a2.273 2.273 0 0 1-1.594.656c-.584 0-1.17-.234-1.592-.656L13.58 36.92a2.272 2.272 0 0 1-.656-1.592c0-.586.234-1.172.656-1.594l6.89-6.89-6.89-6.89a2.273 2.273 0 0 1-.656-1.594c0-.586.234-1.172.656-1.594l3.188-3.187a2.277 2.277 0 0 1 1.593-.657c.587 0 1.173.235 1.595.656l6.89 6.89 6.89-6.89c.42-.422 1.007-.657 1.593-.657s1.172.235 1.593.656l3.19 3.186c.42.422.655 1.008.655 1.594a2.28 2.28 0 0 1-.656 1.594l-6.89 6.89 6.89 6.89c.42.422.655 1.008.655 1.594 0 .586-.235 1.172-.656 1.593z"/></svg>') }
+i.cog {}
+i.edit {}
+i.error {}
+i.image, i.picture {}
+i.mail, i.envelope {}
+i.help {}
+i.heart {}
+i.home {}
+i.info {}
+i.lock {}
+i.log-in {}
+i.log-out {}
+i.map-marker {}
+i.plus {}
+i.search {}
+i.star {}
+i.tablet {}
+i.tag {}
+i.thumbs-up {}
+i.trash {}
+i.user {}
+i.warning {}
+
+/* Device icons */
+i.desktop {}
+i.phone {}
+i.mobile {}
+i.laptop {}
+
+/* Common social media icons */
+i.facebook:before { content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 53.858 53.858"><path d="M52.556 10.775v32.14c0 5.322-4.32 9.64-9.643 9.64H36.62v-19.92h6.662l1.004-7.766H36.62v-4.957c0-2.243.603-3.75 3.85-3.75l4.084-.034V9.2c-.703-.098-3.146-.3-5.96-.3-5.925 0-10.01 3.616-10.01 10.245v5.725H21.89v7.767h6.695v19.92h-17.81c-5.322 0-9.64-4.32-9.64-9.643v-32.14c0-5.322 4.318-9.64 9.64-9.64h32.14c5.322 0 9.64 4.32 9.64 9.64z"/></svg>') }
+i.instagram {}
+i.linkedin {}
+i.twitter {}
+i.youtube {}
+
+/* Responsive */
+@media only screen and (min-width: 768px) and (min-width: 1024px) {
+	/* Sizing (Tablet) */
+}
+
+@media only screen and (max-width: 767px) {
+	/* Sizing (Mobile) */
+}
+
