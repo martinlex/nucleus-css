@@ -1,10 +1,17 @@
-/**
- * Nucleus CSS
- * Copyright Martin Lexelius Core
- * http://www.lexelius.se
- * Free to use under the Creative Commons CC BY-ND license.
- */
+<h1>
+	Nucleus CSS
+</h1>
 
-Nucleus is a minimal CSS boilerplate, with icons included. Nucleus is stand-alone; no dependencies whatsoever. It has support for responsive design. Your project will look great in no time.
+<p>
+	Nucleus is a minimal CSS boilerplate, with icons included. Nucleus is stand-alone; no dependencies whatsoever. It has support for responsive design. Your project will look great in no time.
+</p>
 
-Nucleus is compatible with all modern browsers without the use of JavaScript.
+<p>
+	Nucleus is compatible with all modern browsers without the use of JavaScript.
+</p>
+
+<p>
+	Copyright Martin Lexelius Core<br>
+	http://www.lexelius.se<br>
+	Free to use under the Creative Commons CC BY-ND license.
+</p>
