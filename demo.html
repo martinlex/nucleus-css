@@ -1,100 +1,469 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="nucleus.css">
+		<title>Nucleus CSS</title>
+		<link rel="stylesheet" href="css/nucleus.css">
 		<style>
 			div { margin-bottom: 1px }
 			.section > div { margin-bottom: .25em }
 			.section > div > span { display: inline-block; margin: .5em }
+			div.icon + span, div.social + span { margin-left: .75em }
+			.circle, .rounded { width: 80px; height: 80px; margin-right: 10px }
+			.circle > span, .rounded > span { padding-top: 10px }
+			.form-element { margin-top: .5em; margin-bottom: .5em }
+			label[for='name'] { display: inline-block; width: 5em }
+			.section > div > span,
+			button + span,
+			.icon + span {
+				font-family: Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+				font-size: 80%;
+			}
 		</style>
 	</head>
 	<body>
 
 		<div class="ten center">
 
-			<h1>Nucleus CSS</h1>
+			<h1 class="h0">Nucleus CSS</h1>
+
+			<!-- ***************************************************************** -->
+			<!-- ***************************************************************** -->
+
+			<h1>About</h1>
+
+			<p>
+				Nucleus is a minimal CSS boilerplate, with icons included. Nucleus is stand-alone; no dependencies whatsoever. It has support for responsive design. Your project will look great in no time.
+			</p>
+			<p>
+				Nucleus is compatible with all modern browsers without the use of JavaScript.
+			</p>
+			<p>
+				<i>Note:</i> Plenty of these stylings are attached directly to the DOM-element. Just because it's nice.
+			</p>
+
+			<hr>
+
+			<!-- ***************************************************************** -->
+			<!-- ***************************************************************** -->
+
+			<h1>Installation</h1>
+
+			<p>
+				<a href="#download">Download the latest version of Nucleus</a>. Unzip and place the file in your css folder. <br>
+				Add this link to your head:
+			</p>
+			<code>&lt;link rel="stylesheet" href="css/nucleus.min.css"&gt;</code>
+			<p>
+				That's it. One file, 23.7 kB. Done.
+			</p>
+
+			<hr>
+
+			<!-- ***************************************************************** -->
+			<!-- ***************************************************************** -->
+
+			<h1>Grids</h1>
+
+			<p>
+				Work on the following base-12 grid for desktop:
+			</p>
+			<div class="section grids">
+				<div class="full outline neutral"><span>.twelve / .full</span></div>
+				<!-- * -->
+				<div class="one outline neutral left"><span>.one</span></div>
+				<div class="eleven outline neutral left"><span>.eleven</span></div>
+				<!-- * -->
+				<div class="two outline neutral left"><span>.two</span></div>
+				<div class="ten outline neutral left"><span>.ten</span></div>
+				<!-- * -->
+				<div class="three outline neutral left"><span>.three / .quarter</span></div>
+				<div class="nine outline neutral left"><span>.nine / .three-quarters</span></div>
+				<!-- * -->
+				<div class="three outline neutral left"><span>.three / .quarter</span></div>
+				<div class="three outline neutral left"><span>.three / .quarter</span></div>
+				<div class="three outline neutral left"><span>.three / .quarter</span></div>
+				<div class="three outline neutral left"><span>.three / .quarter</span></div>
+				<!-- * -->
+				<div class="four outline neutral left"><span>.four / .third .one-third</span></div>
+				<div class="eight outline neutral left"><span>.eight / .two-thirds</span></div>
+				<!-- * -->
+				<div class="four outline neutral left"><span>.four / .third</span></div>
+				<div class="four outline neutral left"><span>.four / .third</span></div>
+				<div class="four outline neutral left"><span>.four / .third</span></div>
+				<!-- * -->
+				<div class="five outline neutral left"><span>.five</span></div>
+				<div class="seven outline neutral left"><span>.seven</span></div>
+				<!-- * -->
+				<div class="six outline neutral left"><span>.six / .half</span></div>
+				<div class="six outline neutral left"><span>.six / .half</span></div>
+				<div class="clear"></div>
+			</div>
+			<h2>Responsive grid</h2>
+			<p>
+				Breakpoints are mobile (0&ndash;767px) and tablet (768&ndash;1024px).
+			</p>
+			<p>
+				Simply prefix the above classes with <code>mobile-</code> and <code>tablet-</code> for any element.
+			</p>
+			<p>
+				Example: you have a photo which should be:
+				<ul>
+					<li>25% width in desktop view</li>
+					<li>50% width on a tablet</li>
+					<li>hidden on a mobile</li>
+				</ul>
+				Markup:
+			</p>
+			<code>&lt;img src="photo.png" class="quarter tablet-half mobile-hide"&gt;</code>
 			<br>
 
-			<h1>Grids (columns)</h1>
-			<div class="section">
-				<div class="full border neutral"><span>.twelve .full</span></div>
+			<hr>
 
-				<div class="one border neutral left"><span>.one</span></div>
-				<div class="eleven border neutral left"><span>.eleven</span></div>
+			<!-- ***************************************************************** -->
+			<!-- ***************************************************************** -->
 
-				<div class="two border neutral left"><span>.two</span></div>
-				<div class="ten border neutral left"><span>.ten</span></div>
+			<h1>Nav</h1>
 
-				<div class="three border neutral left"><span>.three .quarter .one-quarter</span></div>
-				<div class="nine border neutral left"><span>.nine .three-quarters</span></div>
+			<nav>
+				<a href="#">Home</a>
+				<a href="#">Page 1</a>
+				<a href="#">Page 2</a>
+				<a href="#">Page 3</a>
+			</nav>
 
-				<div class="three border neutral left"><span>.three .quarter .one-quarter</span></div>
-				<div class="three border neutral left"><span>.three .quarter .one-quarter</span></div>
-				<div class="three border neutral left"><span>.three .quarter .one-quarter</span></div>
-				<div class="three border neutral left"><span>.three .quarter .one-quarter</span></div>
+			<p>Markup:</p>
 
-				<div class="four border neutral left"><span>.four .third .one-third</span></div>
-				<div class="eight border neutral left"><span>.eight .two-thirds</span></div>
+<pre class="half tablet-half mobile-full"><code>
+&lt;nav&gt;
+  &lt;a href="/Home/"&gt;Home&lt;/a&gt;
+  &lt;a href="/Page-1/"&gt;Page 1&lt;/a&gt;
+  &lt;a href="/Page-2/"&gt;Page 2&lt;/a&gt;
+  &lt;a href="/Page-3/"&gt;Page 3&lt;/a&gt;
+&lt;/nav&gt;
+</code></pre>
 
-				<div class="four border neutral left"><span>.four .third .one-third</span></div>
-				<div class="four border neutral left"><span>.four .third .one-third</span></div>
-				<div class="four border neutral left"><span>.four .third .one-third</span></div>
+			<hr>
 
-				<div class="five border neutral left"><span>.five</span></div>
-				<div class="seven border neutral left"><span>.seven</span></div>
-
-				<div class="six border neutral left"><span>.six .half</span></div>
-				<div class="six border neutral left"><span>.six .half</span></div>
-				<div class="clear"></div>
-			</div>
+			<!-- ***************************************************************** -->
+			<!-- ***************************************************************** -->
 
 			<h1>Colors</h1>
-			<div class="section">
-				<div class="left quarter border primary"><span>.primary</span></div>
-				<div class="left quarter border secondary"><span>.secondary</span></div>
-				<div class="left quarter border neutral"><span>.neutral</span></div>
-				<div class="left quarter border warning"><span>.warning</span></div>
+
+			<div class="section colors">
+				<div class="quarter mobile-half outline left primary"><span>.primary</span></div>
+				<div class="quarter mobile-half outline left secondary"><span>.secondary</span></div>
+				<div class="quarter mobile-half outline left neutral"><span>.neutral</span></div>
+				<div class="quarter mobile-half outline left warning"><span>.warning</span></div>
 				<div class="clear"></div>
-				<div class="left quarter border error"><span>.error</span></div>
-				<div class="left quarter border success"><span>.success</span></div>
-				<div class="left quarter border slate"><span>.slate</span></div>
-				<div class="left quarter border invert"><span>.invert</span></div>
+				<div class="quarter mobile-half outline left error"><span>.error</span></div>
+				<div class="quarter mobile-half outline left success"><span>.success</span></div>
+				<div class="quarter mobile-half outline left slate"><span>.slate</span></div>
+				<div class="quarter mobile-half outline left invert"><span>.invert</span></div>
 				<div class="clear"></div>
 			</div>
+
+			<hr>
+
+			<!-- ***************************************************************** -->
+			<!-- ***************************************************************** -->
 
 			<h1>Floating elements</h1>
-			<div class="section">
-				<div class="quarter border left"><span>.left</span></div>
+
+			<div class="section floats">
+				<div class="quarter mobile-half border left"><span>.left</span></div>
 				<div class="clear"></div>
-				<div class="quarter border center"><span>.center</span></div>
+				<div class="quarter mobile-half border center"><span>.center</span></div>
 				<div class="clear"></div>
-				<div class="quarter border right"><span>.right</span></div>
+				<div class="quarter mobile-half border right"><span>.right</span></div>
 				<div class="clear"></div>
 			</div>
+
+			<hr>
+
+			<!-- ***************************************************************** -->
+			<!-- ***************************************************************** -->
 
 			<h1>Text-align</h1>
-			<div class="section">
-				<div class="two border t-left"><span>.t-left</span></div>
+
+			<div class="section text-aligns">
+				<div class="four tablet-half mobile-full border t-left"><span class="code">.t-left</span></div>
 				<div class="clear"></div>
-				<div class="two border t-center"><span>.t-center</span></div>
+				<div class="four tablet-half mobile-full border t-center"><span class="code">.t-center</span></div>
 				<div class="clear"></div>
-				<div class="two border t-right"><span>.t-right</span></div>
+				<div class="four tablet-half mobile-full border t-right"><span class="code">.t-right</span></div>
 				<div class="clear"></div>
 			</div>
 
+			<hr>
+
+			<!-- ***************************************************************** -->
+			<!-- ***************************************************************** -->
+
+			<h1>Element styles</h1>
+
+			<div class="section styles">
+				<div class="circle border t-center t-valign left"><div class="full"><span>.circle</span></div></div>
+				<div class="rounded border t-center t-valign left"><div class="full"><span>.rounded</span></div></div>
+				<div class="clear"></div>
+			</div>
+			<p>
+				<i>Note:</i> To align text vertically, set class <code>.t-valign</code> to the parent:
+			</p>
+
+<pre class="half tablet-half mobile-full"><code>
+&lt;div class="rounded t-valign"&gt;
+  &lt;p class="full t-center"&gt;Yo&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+			<hr>
+
+			<!-- ***************************************************************** -->
+			<!-- ***************************************************************** -->
+
+			<h1>Forms</h1>
+
+			<form action="#">
+				<fieldset>
+
+					<legend>Legend</legend>
+
+					<div class="form-element">
+						<input type="radio" name="gender" value="male" checked><label for="gender">Male</label><br>
+						<input type="radio" name="gender" value="female"><label for="gender">Female</label>
+					</div>
+					<div class="form-element">
+						<label for="name">First name:</label>
+						<input type="text" name="firstname" placeholder="Jean"><br>
+						<label for="name">Last name:</label>
+						<input type="text" name="lastname" placeholder="Marais">
+					</div>
+					<div class="form-element">
+						<label for="options">You have some options:</label>
+						<select name="options">
+							<option value="#">Select</option>
+							<option value="saab">Option 1</option>
+							<option value="fiat">Option 2</option>
+							<option value="audi">Option 3</option>
+						</select>
+					</div>
+					<div class="form-element">
+						<input type="checkbox" name="check" value="Bike"><label for="check">I have a bike</label><br>
+						<input type="checkbox" name="check" value="Car" checked><label for="check">I have a car</label>
+					</div>
+					<div class="form-element">
+						<textarea name="textarea" cols="40" rows="6">Your comments here</textarea>
+					</div>
+					<div class="form-element">
+						<input type="reset" value="Reset" class="secondary">
+						<input type="submit" value="Submit">
+					</div>
+
+				</fieldset>
+			</form>
+
 			<h1>Buttons</h1>
-			<button class="xsmall secondary">Extra small button</button>
-			<button class="small secondary">Small button</button>
-			<button class="primary">Default button</button>
-			<button class="large secondary">Large button</button>
-			<button class="xlarge secondary">Extra large button</button>
+
+			<button class="xsmall warning">Extra small button</button>&nbsp;<span>.xsmall .warning</span><br>
+			<button class="small secondary">Small button</button>&nbsp;<span>.small .secondary</span><br>
+			<button>Default button</button>&nbsp;<span>No markup</span><br>
+			<button class="large success">Large button</button>&nbsp;<span>.large .success</span><br>
+			<button class="xlarge slate">Extra large button</button>&nbsp;<span>.xlarge .slate</span>
 			<div class="clear"></div>
 
-			<h1>Icons</h1>
-			<i class="close"></i>
-			<i class="facebook"></i>
+			<hr>
 
-		</div>
+			<!-- ***************************************************************** -->
+			<!-- ***************************************************************** -->
+
+			<h1>Tables</h1>
+
+			<table class="half tablet-full mobile-full">
+				<caption>Table caption</caption>
+				<tr>
+					<th>Price</th>
+					<th>Location</th>
+					<th>Color</th>
+					<th>Size</th>
+				</tr>
+				<tr>
+					<td>$20</td>
+					<td>Here</td>
+					<td>Red</td>
+					<td>Large</td>
+				</tr>
+				<tr>
+					<td>$30</td>
+					<td>There</td>
+					<td>Green</td>
+					<td>Medium</td>
+				</tr>
+				<tr>
+					<td>$40</td>
+					<td>Everywhere</td>
+					<td>Blue</td>
+					<td>Small</td>
+				</tr>
+			</table>
+
+			<hr>
+
+			<!-- ***************************************************************** -->
+			<!-- ***************************************************************** -->
+
+			<h1>Icons</h1>
+
+			<p>
+				The 46 most common web icons are included. To avoid vector bloat and to reduce bytesize, each icon is first manually optimized, point for point, then optimized again with svgo. They are embedded as inline svg &ndash; no need to link or load separate icon libraries. <br>
+				Markup:
+			</p>
+
+<pre class="three tablet-half mobile-full"><code>
+&lt;div class="icon bar"&gt;&lt;/div&gt;
+&lt;div class="icon facebook"&gt;&lt;/div&gt;
+</code></pre>
+
+			<!-- <div class="clear"></div> -->
+			<span>etc.</span>
+
+			<h3>Basic UI</h3>
+
+			<div class="clear"></div>
+
+			<div class="quarter tablet-half mobile-full left">
+				<div class="icon bar"></div><span>.icon .bar / .menu</span><br>
+				<div class="icon home"></div><span>.icon .home</span><br>
+				<div class="icon search"></div><span>.icon .search</span><br>
+				<div class="icon user"></div><span>.icon .user</span><br>
+				<div class="icon cog"></div><span>.icon .cog / .settings</span><br>
+				<div class="icon close"></div><span>.icon .close</span><br>
+				<div class="icon trash"></div><span>.icon .trash</span><br>
+				<div class="icon tag"></div><span>.icon .tag</span><br>
+			</div>
+
+			<div class="quarter tablet-half mobile-full left">
+				<div class="icon plus"></div><span>.icon .plus</span><br>
+				<div class="icon minus"></div><span>.icon .minus</span><br>
+				<div class="icon check"></div><span>.icon .check</span><br>
+				<div class="icon checked"></div><span>.icon .checked</span><br>
+				<div class="icon unchecked"></div><span>.icon .unchecked</span><br>
+				<div class="icon locked"></div><span>.icon .locked</span><br>
+				<div class="icon unlocked"></div><span>.icon .unlocked</span><br>
+				<div class="icon mail"></div><span>.icon .mail</span>
+			</div>
+
+			<div class="quarter tablet-half mobile-full left">
+				<div class="icon sign-in"></div><span>.icon .sign-in / .log-in</span><br>
+				<div class="icon sign-out"></div><span>.icon .sign-out / .log-out</span><br>
+				<div class="icon info"></div><span>.icon .info</span><br>
+				<div class="icon help"></div><span>.icon .help</span><br>
+				<div class="icon alert"></div><span>.icon .alert</span><br>
+				<div class="icon calendar"></div><span>.icon .calendar</span><br>
+				<div class="icon date"></div><span>.icon .date</span><br>
+				<div class="icon clock"></div><span>.icon .clock</span>
+			</div>
+
+			<div class="quarter tablet-half mobile-full left">
+				<div class="icon feed"></div><span>.icon .feed / .rss</span><br>
+				<div class="icon wifi"></div><span>.icon .wifi</span><br>
+				<div class="icon share"></div><span>.icon .share</span><br>
+				<div class="icon edit"></div><span>.icon .edit</span><br>
+				<div class="icon save"></div><span>.icon .save</span><br>
+				<div class="icon cart"></div><span>.icon .cart</span><br>
+				<div class="icon thumbs-up"></div><span>.icon .thumbs-up</span><br>
+				<div class="icon love"></div><span>.icon .love</span>
+			</div>
+
+			<div class="clear"></div>
+			<br>
+
+			<div class="quarter tablet-half mobile-full left">
+				<h3>Devices</h3>
+				<div class="icon desktop"></div><span>.icon .desktop</span><br>
+				<div class="icon laptop"></div><span>.icon .laptop</span><br>
+				<div class="icon tablet"></div><span>.icon .tablet</span><br>
+				<div class="icon mobile"></div><span>.icon .mobile</span><br>
+				<div class="icon phone"></div><span>.icon .phone</span><br>
+				<div class="icon smart-watch"></div><span>.icon .smart-watch</span><br>
+				<div class="icon game"></div><span>.icon .game</span>
+			</div>
+
+			<div class="quarter tablet-half mobile-full left">
+				<h3>Social media</h3>
+				<div class="icon facebook"></div><span>.icon .facebook</span><br>
+				<div class="icon twitter"></div><span>.icon .twitter</span><br>
+				<div class="icon instagram"></div><span>.icon .instagram</span><br>
+				<div class="icon linkedin"></div><span>.icon .linkedin</span><br>
+				<div class="icon pinterest"></div><span>.icon .pinterest</span><br>
+				<div class="icon youtube"></div><span>.icon .youtube</span><br>
+				<div class="icon google-plus"></div><span>.icon .google-plus</span>
+			</div>
+
+			<div class="clear"></div>
+
+			<br>
+			<p>
+				Use default size for pixel perfect appearance. However:
+			</p>
+
+			<div class="three tablet-four mobile-nine left" style="margin-right:10px">
+				<p>
+					Resize one icon:
+				</p>
+
+<pre><code>
+.home {
+  width  : 32px;
+  height : 32px;
+}
+</code></pre>
+
+			</div>
+
+			<div class="three tablet-four mobile-nine left" style="margin-right:10px">
+				<p>
+					Alternatively for all icons:
+				</p>
+
+<pre><code>
+.icon {
+  width  : 36px;
+  height : 36px;
+}
+</code></pre>
+
+			</div>
+			<div class="clear"></div>
+
+			<hr>
+
+			<!-- ***************************************************************** -->
+			<!-- ***************************************************************** -->
+
+			<a name="download"></a>
+			<h1>Download</h1>
+
+			<div class="full t-center">
+				<a href="package/nucleus-1.0.1.zip">
+					<button class="xlarge success" type="button">Download Nucleus 1.0.1</button>
+				</a>
+			</div>
+
+			<hr>
+
+			<!-- ***************************************************************** -->
+			<!-- ***************************************************************** -->
+
+			<footer class="full t-center">
+				<p class="small">
+					Built by Martin Lexelius Core in 2016, <a href="http://www.lexelius.se">Lexelius.se</a> 
+					<a href="https://se.linkedin.com/in/martinlexelius"><div class="icon linkedin"></div></a>
+					<a href="https://www.facebook.com/martin.lexelius"><div class="icon facebook"></div></a>
+					<a href="mailto:info@lexelius.se?subject=Howdy!"><div class="icon mail"></div></a>
+				</p>
+			</footer>
+
+		</div> <!-- End ten -->
 
 	</body>
 </html>
