@@ -262,7 +262,7 @@ hr.thin {
 .right { float: right }
 .center { display: block; margin: auto }
 .clear { clear: both }
-.hide { display: none }
+.hide { display: none !important }
 
 
 /* Text positioning */
