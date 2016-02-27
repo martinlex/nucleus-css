@@ -52,7 +52,11 @@
 				<a href="#download">Download the latest version of Nucleus</a>. Unzip and place the file in your css folder. <br>
 				Add this link to your head:
 			</p>
-			<code>&lt;link rel="stylesheet" href="css/nucleus.min.css"&gt;</code>
+
+<pre class="full"><code>
+&lt;link rel="stylesheet" href="css/nucleus.css"&gt;
+</code></pre>
+
 			<p>
 				That's it. One file, 23.7 kB. Done.
 			</p>
@@ -107,15 +111,17 @@
 			</p>
 			<p>
 				Example: you have a photo which should be:
-				<ul>
-					<li>25% width in desktop view</li>
-					<li>50% width on a tablet</li>
-					<li>hidden on a mobile</li>
-				</ul>
-				Markup:
 			</p>
-			<code>&lt;img src="photo.png" class="quarter tablet-half mobile-hide"&gt;</code>
-			<br>
+			<ul>
+				<li>25% width in desktop view</li>
+				<li>50% width on a tablet</li>
+				<li>hidden on a mobile</li>
+			</ul>
+			<p>Markup:</p>
+
+<pre class="full"><code>
+&lt;img src="photo.png" class="quarter tablet-half mobile-hide"&gt;
+</code></pre>
 
 			<hr>
 
@@ -210,7 +216,7 @@
 				<i>Note:</i> To align text vertically, set class <code>.t-valign</code> to the parent:
 			</p>
 
-<pre class="half tablet-half mobile-full"><code>
+<pre class="half mobile-full"><code>
 &lt;div class="rounded t-valign"&gt;
   &lt;p class="full t-center"&gt;Yo&lt;/p&gt;
 &lt;/div&gt;
@@ -314,7 +320,9 @@
 			<h1>Icons</h1>
 
 			<p>
-				The 46 most common web icons are included. To avoid vector bloat and to reduce bytesize, each icon is first manually optimized, point for point, then optimized again with svgo. They are embedded as inline svg &ndash; no need to link or load separate icon libraries. <br>
+				The 46 most common web icons are included. To avoid vector bloat and to reduce bytesize, each icon is first manually optimized, point for point, then optimized again with svgo. They are embedded as inline svg &ndash; no need to link or load separate icon libraries.
+			</p>
+			<p>
 				Markup:
 			</p>
 
@@ -406,7 +414,7 @@
 				Use default size for pixel perfect appearance. However:
 			</p>
 
-			<div class="three tablet-four mobile-nine left" style="margin-right:10px">
+			<div class="five mobile-eleven left" style="margin-right:10px">
 				<p>
 					Resize one icon:
 				</p>
@@ -420,7 +428,7 @@
 
 			</div>
 
-			<div class="three tablet-four mobile-nine left" style="margin-right:10px">
+			<div class="five mobile-eleven left" style="margin-right:10px">
 				<p>
 					Alternatively for all icons:
 				</p>
