@@ -22,6 +22,7 @@
 	</head>
 	<body>
 
+		<!-- Wrapper -->
 		<div class="ten center">
 
 			<h1 class="h0">Nucleus CSS</h1>
@@ -49,8 +50,8 @@
 			<h1>Installation</h1>
 
 			<p>
-				<a href="#download">Download the latest version of Nucleus</a>. Unzip and place the file in your css folder. <br>
-				Add this link to your head:
+				<a href="#download">Download the latest version of Nucleus</a>. Unzip and place the file in your css folder.<br>
+				Pop this link to your head:
 			</p>
 
 <pre class="full"><code>
@@ -58,7 +59,7 @@
 </code></pre>
 
 			<p>
-				That's it. One file, 23.7 kB. Done.
+				That's it. One file, 23.8 kB. Done.
 			</p>
 
 			<hr>
@@ -103,15 +104,9 @@
 				<div class="clear"></div>
 			</div>
 			<h2>Responsive grid</h2>
-			<p>
-				Breakpoints are mobile (0&ndash;767px) and tablet (768&ndash;1024px).
-			</p>
-			<p>
-				Simply prefix the above classes with <code>mobile-</code> and <code>tablet-</code> for any element.
-			</p>
-			<p>
-				Example: you have a photo which should be:
-			</p>
+			<p>Breakpoints are mobile (0&ndash;767px) and tablet (768&ndash;1024px).</p>
+			<p>Simply prefix the above classes with <code>mobile-</code> and <code>tablet-</code> for any element.</p>
+			<p>Example: you have a photo which should be:</p>
 			<ul>
 				<li>25% width in desktop view</li>
 				<li>50% width on a tablet</li>
@@ -128,7 +123,7 @@
 			<!-- ***************************************************************** -->
 			<!-- ***************************************************************** -->
 
-			<h1>Nav</h1>
+			<h1>Menu nav</h1>
 
 			<nav>
 				<a href="#">Home</a>
@@ -173,7 +168,7 @@
 			<!-- ***************************************************************** -->
 			<!-- ***************************************************************** -->
 
-			<h1>Floating elements</h1>
+			<h1>Floats</h1>
 
 			<div class="section floats">
 				<div class="quarter mobile-half border left"><span>.left</span></div>
@@ -320,7 +315,7 @@
 			<h1>Icons</h1>
 
 			<p>
-				The 46 most common web icons are included. To avoid vector bloat and to reduce bytesize, each icon is first manually optimized, point for point, then optimized again with svgo. They are embedded as inline svg &ndash; no need to link or load separate icon libraries.
+				The 46 most common web icons are included. To avoid vector bloat and to reduce bytesize, each icon is rebuilt and optimized, point for point, then optimized again with <a href="https://www.npmjs.com/package/svgo">svgo</a>. They are embedded as inline svg &ndash; no need to link or load separate icon libraries.
 			</p>
 			<p>
 				Markup:
@@ -471,7 +466,8 @@
 				</p>
 			</footer>
 
-		</div> <!-- End ten -->
+		</div>
+		<!-- End wrapper -->
 
 	</body>
 </html>
