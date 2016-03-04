@@ -3,7 +3,7 @@
  * Copyright 2016, Martin Lexelius Core
  * http://www.lexelius.se
  * Free to use under the Creative Commons CC BY-ND license.
- * February, 2016
+ * March, 2016
  */
 
 /* Color lib */
@@ -35,26 +35,21 @@ body {
 
 /* Typography */
 .h0 { font-size: 3em }
-h1 { font-size: 2em }
-h2 { font-size: 1.5em }
-h3 {}
-h4 {}
-h5 {}
-h6 {}
-p { line-height: 140% }
-span {}
+h1  { font-size: 2em }
+h2  { font-size: 1.5em }
+h3  {}
+h4  {}
+h5  {}
+h6  {}
+p   { line-height: 140% }
 
 a {
    color       : #000000;
    font-weight : bolder;
    transition  : ease all .2s;
 }
-a:visited {
-   color : #777777;
-}
-a:hover {
-   color : $primaryBlue;
-}
+a:visited { color : #777777 }
+a:hover   { color : $primaryBlue }
 
 .default-code-snippet {
    border-radius : 4px;
@@ -85,9 +80,7 @@ pre > code {
 
 
 /* Hover effect */
-.darken-hover {
-   box-shadow: inset 0 0 0 99999px rgba(0, 0, 0, .15);
-}
+.darken-hover { box-shadow: inset 0 0 0 99999px rgba(0, 0, 0, .15) }
 
 
 /* Nav */
@@ -142,8 +135,7 @@ form {
    }
    input[type='text'],
    input[type='number'],
-   textarea
-   {
+   textarea {
       border         : 1px solid #CCC;
       border-radius  : 4px;
       box-shadow     : inset 0px 1px 3px #DDD;
@@ -154,8 +146,7 @@ form {
       vertical-align : middle;
    }
    label + input[type='text'],
-   label + input[type='number']
-   {
+   label + input[type='number'] {
       margin-left: 1em;
    }
    select {
@@ -172,20 +163,19 @@ form {
 input[type='submit'], 
 input[type='reset'], 
 input[type='button'], 
-button 
-{
-   background: $primaryBlue;
-   border-radius: 4px;
-   border: 0px solid #bbb;
-   color: $almostWhite;
-   cursor: pointer;
-   display: inline-block;
-   font-size: 100%;
-   margin: 2px;
-   padding: .5em 1em;
-   text-align: center;
-   text-decoration: none;
-   transition: ease all .2s;
+button {
+   background      : $primaryBlue;
+   border-radius   : 4px;
+   border          : 0px solid #bbb;
+   color           : $almostWhite;
+   cursor          : pointer;
+   display         : inline-block;
+   font-size       : 100%;
+   margin          : 2px;
+   padding         : .5em 1em;
+   text-align      : center;
+   text-decoration : none;
+   transition      : ease all .2s;
    &:hover {
       @extend .darken-hover;
    }
@@ -194,20 +184,20 @@ button
 
 /* Tables */
 table {
-   border-collapse: collapse;
-   border-spacing: 0;
+   border-collapse : collapse;
+   border-spacing  : 0;
    caption {
-      font-size: 110%;
-      font-weight: bold;
-      margin-bottom: .5em;
+      font-size     : 110%;
+      font-weight   : bold;
+      margin-bottom : .5em;
    }
    th {
-      background: $slateGrey;
-      color: $almostWhite;
-      font-size: 75%;
-      letter-spacing: 1px;
-      padding: .8em;
-      text-transform: uppercase;
+      background     : $slateGrey;
+      color          : $almostWhite;
+      font-size      : 75%;
+      letter-spacing : 1px;
+      padding        : .8em;
+      text-transform : uppercase;
    }
    tr:nth-child(even) { background: $neutralGrey }
    tr:nth-child(odd)  { background: $mediumGrey }
@@ -230,77 +220,77 @@ li {}
 
 /* Rulers */
 hr {
-   border: 0;
-   color: $graphiteGrey;
-   background-color: $graphiteGrey;
-   height: 4px;
-   margin-top: 2em;
-   margin-bottom: 2em;
+   border           : 0;
+   color            : $graphiteGrey;
+   background-color : $graphiteGrey;
+   height           : 4px;
+   margin-top       : 2em;
+   margin-bottom    : 2em;
 }
 hr.thin {
    @extend hr;
-   height: 1px;
+   height : 1px;
 }
 
 
 /* Colors */
-.primary { background-color: $primaryBlue; color: $almostWhite }
+.primary   { background-color: $primaryBlue; color: $almostWhite }
 .secondary { background-color: $secondaryBlue; color: $almostWhite }
-.neutral { background-color: $neutralGrey }
-.warning { background-color: $warningOrange; color: $almostWhite }
-.error { background-color: $errorRed; color: $almostWhite }
-.success { background-color: $successGreen; color: $almostWhite }
-.slate { background-color: $slateGrey; color: $almostWhite }
-.invert { background-color: $almostBlack; color: $almostWhite }
+.neutral   { background-color: $neutralGrey }
+.warning   { background-color: $warningOrange; color: $almostWhite }
+.error     { background-color: $errorRed; color: $almostWhite }
+.success   { background-color: $successGreen; color: $almostWhite }
+.slate     { background-color: $slateGrey; color: $almostWhite }
+.invert    { background-color: $almostBlack; color: $almostWhite }
 
 
 /* Element positioning */
 .absolute { position: absolute }
-.fixed { position: fixed }
+.fixed    { position: fixed }
 .relative { position: relative }
-.left { float: left }
-.right { float: right }
-.center { display: block; margin: auto }
-.clear { clear: both }
-.hide { display: none !important }
+.left     { float: left }
+.right    { float: right }
+.center   { display: block; margin: auto }
+.clear    { clear: both }
+.hide     { display: none !important }
 
 
 /* Text positioning */
-.t-left { text-align: left }
-.t-right { text-align: right }
+.t-left   { text-align: left }
+.t-right  { text-align: right }
 .t-center { text-align: center }
 .t-valign { 
-   display: flex;
-   align-items: center;
+   display     : flex;
+   align-items : center;
    // justify-content: center;
 }
 
 
 /* Sizing (Desktop) */
-.twelve, .full, { width: 100% }
-.eleven { width: 91.666% }
-.ten { width: 83.333% }
+.twelve, .full         { width: 100% }
+.eleven                { width: 91.666% }
+.ten                   { width: 83.333% }
 .nine, .three-quarters { width: 75% }
-.eight, .two-thirds { width: 66.666% }
-.seven { width: 58.333% }
-.six, .half { width: 50% }
-.five { width: 41.666% }
-.four, .third { width: 33.333% }
-.three, .quarter { width: 25% }
-.two { width: 16.666% }
-.one { width: 8.333% }
+.eight, .two-thirds    { width: 66.666% }
+.seven                 { width: 58.333% }
+.six, .half            { width: 50% }
+.five                  { width: 41.666% }
+.four, .third          { width: 33.333% }
+.three, .quarter       { width: 25% }
+.two                   { width: 16.666% }
+.one                   { width: 8.333% }
 
 
 /* Styling */
-.border { border: 1px #222 solid }
+.border  { border: 1px #222 solid }
 .outline { outline: 1px #222 solid }
 .rounded { border-radius: 4px }
-.circle { border-radius: 50% }
-.no-pad { padding: 0 }
+.circle  { border-radius: 50% }
+.no-pad  { padding: 0 }
 
 .xs, .xsmall { font-size: 80% !important }
-.small { font-size: 90% !important }
-.large { font-size: 110% !important }
+.small       { font-size: 90% !important }
+.large       { font-size: 110% !important }
 .xl, .xlarge { font-size: 120% !important }
 
 
@@ -436,35 +426,35 @@ div.pinterest, div.twitter, div.youtube
 /* Responsive */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
    /* Sizing (Tablet) */
-   .tablet-twelve, .tablet-full { width: 100% }
-   .tablet-eleven { width: 91.666% }
-   .tablet-ten { width: 83.333% }
+   .tablet-twelve, .tablet-full         { width: 100% }
+   .tablet-eleven                       { width: 91.666% }
+   .tablet-ten                          { width: 83.333% }
    .tablet-nine, .tablet-three-quarters { width: 75% }
-   .tablet-eight, .tablet-two-thirds { width: 66.666% }
-   .tablet-seven { width: 58.333% }
-   .tablet-six, .tablet-half { width: 50% }
-   .tablet-five { width: 41.666% }
-   .tablet-four, .tablet-third { width: 33.333% }
-   .tablet-three, .tablet-quarter { width: 25% }
-   .tablet-two { width: 16.666% }
-   .tablet-one { width: 8.333% }
-   .tablet-hide { display: none }
+   .tablet-eight, .tablet-two-thirds    { width: 66.666% }
+   .tablet-seven                        { width: 58.333% }
+   .tablet-six, .tablet-half            { width: 50% }
+   .tablet-five                         { width: 41.666% }
+   .tablet-four, .tablet-third          { width: 33.333% }
+   .tablet-three, .tablet-quarter       { width: 25% }
+   .tablet-two                          { width: 16.666% }
+   .tablet-one                          { width: 8.333% }
+   .tablet-hide                         { display: none }
 }
 
 @media screen and (max-width: 767px) {
    /* Sizing (Mobile) */
-   .mobile-twelve, .mobile-full { width: 100% }
-   .mobile-eleven { width: 91.666% }
-   .mobile-ten { width: 83.333% }
+   .mobile-twelve, .mobile-full         { width: 100% }
+   .mobile-eleven                       { width: 91.666% }
+   .mobile-ten                          { width: 83.333% }
    .mobile-nine, .mobile-three-quarters { width: 75% }
-   .mobile-eight, .mobile-two-thirds { width: 66.666% }
-   .mobile-seven { width: 58.333% }
-   .mobile-six, .mobile-half { width: 50% }
-   .mobile-five { width: 41.666% }
-   .mobile-four, .mobile-third { width: 33.333% }
-   .mobile-three, .mobile-quarter { width: 25% }
-   .mobile-two { width: 16.666% }
-   .mobile-one { width: 8.333% }
-   .mobile-hide { display: none }
+   .mobile-eight, .mobile-two-thirds    { width: 66.666% }
+   .mobile-seven                        { width: 58.333% }
+   .mobile-six, .mobile-half            { width: 50% }
+   .mobile-five                         { width: 41.666% }
+   .mobile-four, .mobile-third          { width: 33.333% }
+   .mobile-three, .mobile-quarter       { width: 25% }
+   .mobile-two                          { width: 16.666% }
+   .mobile-one                          { width: 8.333% }
+   .mobile-hide                         { display: none }
 }
 
