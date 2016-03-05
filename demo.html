@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Nucleus CSS</title>
 		<link rel="stylesheet" href="css/nucleus.css">
 		<style>
@@ -41,6 +42,47 @@
 				font-family: Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 				font-size: 80%;
 			}
+			@media screen and (max-width: 767px) {
+				svg.logo { height: 50%; width: 50% }
+				.h0 { font-size: 2.5em }
+				/* Grid fix */
+				.grids > .three > span { display: none }
+				.grids > .three:after {
+					content: '.three';
+					display: inline-block;
+					font-family: Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+					font-size: 80%;
+					margin: .5em;
+				}
+				.grids > .four > span { display: none }
+				.grids > .four:after {
+					content: '.four';
+					display: inline-block;
+					font-family: Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+					font-size: 80%;
+					margin: .5em;
+				}
+				.grids > .eight > span { display: none }
+				.grids > .eight:after {
+					content: '.eight';
+					display: inline-block;
+					font-family: Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+					font-size: 80%;
+					margin: .5em;
+				}
+				.grids > .nine > span { display: none }
+				.grids > .nine:after {
+					content: '.nine';
+					display: inline-block;
+					font-family: Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+					font-size: 80%;
+					margin: .5em;
+				}
+				form fieldset { padding: 1em }
+				form input[type='text'] { width: 45% }
+				table td { font-size: 80%; padding: .5em }
+				table th { padding: .5em }
+			}
 		</style>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" />
 		<!--[if lt IE 9]>
@@ -49,17 +91,17 @@
 	</head>
 	<body>
 
-	<!-- Repo -->
-	<a class="github-fork-ribbon" href="https://github.com/martinlex/nucleus-css" title="Fork me on GitHub">Fork me on GitHub</a>
+		<!-- Repo -->
+		<a class="github-fork-ribbon" href="https://github.com/martinlex/nucleus-css" title="Fork me on GitHub">Fork me on GitHub</a>
 
-	<!-- Logo -->
-	<div class="full">
-		<svg class="logo center" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-			<circle class="circle-around" fill="#FFF" stroke-width=".1" stroke-miterlimit="10" cx="12" cy="12" r="10"/>
-			<circle class="circle-middle" cx="12" cy="12" r="3"/>
-			<circle class="circle-small" cx="12" cy="2" r="1"/>
-		</svg>
-	</div>
+		<!-- Logo -->
+		<div class="full">
+			<svg class="logo center" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<circle class="circle-around" fill="#FFF" stroke-width=".1" stroke-miterlimit="10" cx="12" cy="12" r="10"/>
+				<circle class="circle-middle" cx="12" cy="12" r="3"/>
+				<circle class="circle-small" cx="12" cy="2" r="1"/>
+			</svg>
+		</div>
 
 		<!-- Wrapper -->
 		<div class="ten center">
@@ -291,7 +333,7 @@
 						<input type="checkbox" name="check" value="Bike"><label for="check">I have a bike</label><br>
 						<input type="checkbox" name="check" value="Car" checked><label for="check">I have a car</label>
 					</div>
-					<div class="form-element">
+					<div class="form-element mobile-hide">
 						<textarea name="textarea" cols="40" rows="6">Your comments here</textarea>
 					</div>
 					<div class="form-element">
@@ -322,25 +364,25 @@
 				<caption>Table caption</caption>
 				<tr>
 					<th>Price</th>
-					<th>Location</th>
+					<th>Name</th>
 					<th>Color</th>
 					<th>Size</th>
 				</tr>
 				<tr>
 					<td>$20</td>
-					<td>Here</td>
+					<td>Huey</td>
 					<td>Red</td>
 					<td>Large</td>
 				</tr>
 				<tr>
 					<td>$30</td>
-					<td>There</td>
+					<td>Dewey</td>
 					<td>Green</td>
 					<td>Medium</td>
 				</tr>
 				<tr>
 					<td>$40</td>
-					<td>Everywhere</td>
+					<td>Louie</td>
 					<td>Blue</td>
 					<td>Small</td>
 				</tr>
